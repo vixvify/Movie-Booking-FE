@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function page() {
   return (
     <div className="flex flex-col justify-center items-center min-h-[calc(100vh-160px)] gap-15">
-      <h1 className="text-white text-5xl">Sign up | สมัครบัญชี</h1>
+      <h1 className="text-white text-5xl font-bold">Sign up | สมัครบัญชี</h1>
       <div className="border-2 border-white w-full max-w-md rounded-xl py-8 flex flex-col items-center">
         <form className="w-[85%] flex flex-col items-start gap-3">
           <p className="text-white">Name</p>
@@ -37,7 +37,7 @@ export default function page() {
         </form>
         <div className="flex gap-2 mt-6">
           <p className="text-white">Have any account?</p>
-          <Link href="/pages/login" className="text-sky-300">
+          <Link href="/auth/login" className="text-sky-300">
             Login
           </Link>
         </div>

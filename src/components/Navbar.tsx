@@ -9,22 +9,18 @@ export default function Navbar() {
           <Link href={"/"}>
             <li>Home</li>
           </Link>
-          <Link href={"/pages/movies/showing"}>
+          <Link href={"/movies/showing"}>
             <li>Movies</li>
           </Link>
-          <Link href={"/pages/tickets"}>
+          <Link href={"/history"}>
             <li>Tickets</li>
           </Link>
 
-          <Link href={"/pages/login"}>
+          <Link href={"/auth/login"}>
             <li>Login</li>
           </Link>
-          <Link href={"/pages/signup"}>
+          <Link href={"/auth/signup"}>
             <li>Sign up</li>
-          </Link>
-          <li className="cursor-pointer">Logout</li>
-          <Link href={"/pages/admin"}>
-            <li>Admin</li>
           </Link>
         </ul>
       </nav>

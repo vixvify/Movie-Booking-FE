@@ -97,10 +97,7 @@ export default function Page() {
             {seats.map((e, index) => {
               return (
                 <div className="" key={index}>
-                  <MdEventSeat
-                    color={`${index < 100 ? "red" : "purple"}`}
-                    className="w-6 h-6"
-                  />
+                  <MdEventSeat color="red" className="w-6 h-6" />
                 </div>
               );
             })}
