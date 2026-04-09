@@ -5,6 +5,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
+import { HeaderPoster } from "../data/mock-data";
 
 export default function Header() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -12,7 +13,6 @@ export default function Header() {
       delay: 3000,
     }),
   ]);
-  const header = ["/avatarheader.png", "/spiderheader.png"];
   return (
     <div className="flex justify-center items-center mt-10 pl-20 pr-20 gap-5">
       <ArrowBackIosNewIcon
@@ -21,20 +21,16 @@ export default function Header() {
       />
       <div className="overflow-hidden w-full" ref={emblaRef}>
         <div className="flex gap-4">
-          <Image
-            src={header[0]}
-            width={1700}
-            height={450}
-            alt="poster"
-            className="rounded-xl"
-          ></Image>
-          <Image
-            src={header[1]}
-            width={1700}
-            height={450}
-            alt="poster"
-            className="rounded-xl"
-          ></Image>
+          {HeaderPoster.map((poster, index) => (
+            <Image
+              src={poster}
+              width={1700}
+              height={450}
+              alt="poster"
+              className="rounded-xl"
+              key={index}
+            ></Image>
+          ))}
         </div>
       </div>
       <ArrowForwardIosIcon
