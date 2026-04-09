@@ -32,12 +32,16 @@ export default function Movie() {
                     alt="poster"
                     key={index}
                     className="rounded-xl"
+                    priority
                   />
                 </Link>
                 <h1 className="text-white text-xl font-semibold mt-4">
                   {item.title}
                 </h1>
-                <h2 className="text-gray-300">{item.release}</h2>
+                <h2 className="text-gray-300 text-sm">{item.release}</h2>
+                <h3 className="text-gray-300 text-sm opacity-50">
+                  {item.duration} นาที
+                </h3>
               </div>
             ))}
           </div>
